@@ -278,7 +278,7 @@ def mess(message):
         btn6 = types.KeyboardButton('Последний герой')
         btn7 = types.KeyboardButton('Звезда По Имени Солнце')
         btn8 = types.KeyboardButton('Черный альбом')
-        markup.add(btn1, btn2, btn3, btn4, btn5, btn6,btn7, btn8)
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
         final_message = "Так, так, так\nПостой, лучше нажми на одну из интерактивных кнопок ниже"
     bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
 
