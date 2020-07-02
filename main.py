@@ -4,7 +4,9 @@ import telebot
 
 from telebot import types
 import sys
+
 bot = telebot.TeleBot('1088072428:AAHpn9hC9g6tJwdwmk3rAkXMje8RI0-gbAc')
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -24,6 +26,7 @@ def start(message):
     send_mess = f"<b>Привет {message.from_user.first_name}</b>!\nКакой альбом вас " \
                 f"интересует? "
     bot.send_message(message.chat.id, send_mess, parse_mode='html', reply_markup=markup)
+
 
 @bot.message_handler(content_types=['text'])
 def mess(message):
@@ -282,6 +285,7 @@ def mess(message):
         markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
         final_message = "Так, так, так\nПостой, лучше нажми на одну из интерактивных кнопок ниже"
     bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
+
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
