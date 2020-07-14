@@ -22,8 +22,8 @@ def start(message):
     btn7 = types.KeyboardButton('Звезда По Имени Солнце')
     btn8 = types.KeyboardButton('Черный альбом')
     markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
-    send_mess = f"<b>Привет {message.from_user.first_name}</b>!\nКакой альбом вас " \
-                f"интересует? "
+    send_mess = f"<b>Привет {message.from_user.first_name}</b>!\nКакой альбом вы хотите " \
+                f"послушать? "
     bot.send_message(message.chat.id, send_mess, parse_mode='html', reply_markup=markup)
 
 
