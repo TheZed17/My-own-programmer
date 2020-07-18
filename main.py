@@ -21,7 +21,8 @@ def start(message):
     btn6 = types.KeyboardButton('Последний герой')
     btn7 = types.KeyboardButton('Звезда По Имени Солнце')
     btn8 = types.KeyboardButton('Черный альбом')
-    markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
+    btn9 = types.KeyboardButton('Фильм')
+    markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
     send_mess = f"<b>Привет {message.from_user.first_name}</b>!\nКакой альбом вы хотите " \
                 f"послушать? "
     bot.send_message(message.chat.id, send_mess, parse_mode='html', reply_markup=markup)
@@ -41,7 +42,8 @@ def mess(message):
         btn6 = types.KeyboardButton('Последний герой')
         btn7 = types.KeyboardButton('Звезда По Имени Солнце')
         btn8 = types.KeyboardButton('Черный альбом')
-        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
+        btn9 = types.KeyboardButton('Фильм')
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
         final_message = "Решил послушать какой-то другой? \nКакие альбомы вас интересуют?:"
 
     elif get_message_bot == "45":
@@ -281,7 +283,8 @@ def mess(message):
         btn6 = types.KeyboardButton('Последний герой')
         btn7 = types.KeyboardButton('Звезда По Имени Солнце')
         btn8 = types.KeyboardButton('Черный альбом')
-        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8)
+        btn9 = types.KeyboardButton('Фильм')
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
         final_message = "Так, так, так\nПостой, лучше нажми на одну из интерактивных кнопок ниже"
     bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
 
